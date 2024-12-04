@@ -1,0 +1,108 @@
+{
+  "name": "schenke-io/laravel-gzip",
+  "description": "Zlip Facade for Laravel",
+  "keywords": [
+    "schenke-io",
+    "laravel",
+    "laravel-gzip"
+  ],
+  "homepage": "https://github.com/schenke-io/laravel-gzip",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "SchenkeIo",
+      "email": "github@schenke.io",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "illuminate/contracts": "^10.0|^11.0",
+    "spatie/laravel-package-tools": "^1.0",
+    "spatie/laravel-ray": "^1.37",
+    "ext-zlib": "*"
+  },
+  "require-dev": {
+    "larastan/larastan": "^2.0",
+    "laravel/pint": "^1.13",
+    "nunomaduro/collision": "^8.1",
+    "orchestra/testbench": "^9.0",
+    "pestphp/pest": "^3.0",
+    "phpstan/phpstan-phpunit": "^1.4",
+    "schenke-io/packaging-tools": "^0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "SchenkeIo\\LaravelGzip\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SchenkeIo\\LaravelGzip\\Tests\\": "tests/",
+      "Workbench\\App\\": "workbench/app/",
+      "Workbench\\Database\\Factories\\": "workbench/database/factories/",
+      "Workbench\\Database\\Seeders\\": "workbench/database/seeders/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "SchenkeIo\\LaravelGzip\\LaravelGzipServiceProvider"
+      ]
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "@clear",
+      "@prepare",
+      "@composer run prepare"
+    ],
+    "prepare": "@php vendor/bin/testbench package:discover --ansi",
+    "build": "@php vendor/bin/testbench workbench:build --ansi",
+    "setup": "SchenkeIo\\PackagingTools\\Setup::handle",
+    "start": [
+      "Composer\\Config::disableProcessTimeout",
+      "@composer run build",
+      "@php vendor/bin/testbench serve"
+    ],
+    "analyse": "./vendor/bin/phpstan analyse",
+    "test": "vendor/bin/pest",
+    "pint": "vendor/bin/pint",
+    "readme": "vendor/bin/testbench make:release",
+    "release": [
+      "@pint",
+      "@analyse",
+      "@coverage",
+      "@markdown"
+    ],
+    "serve": [
+      "Composer\\Config::disableProcessTimeout",
+      "@build",
+      "@php vendor/bin/testbench serve --ansi"
+    ],
+    "lint": [
+      "@php vendor/bin/pint",
+      "@php vendor/bin/phpstan analyse"
+    ],
+    "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+    "low": "composer update --prefer-lowest --prefer-dist",
+    "stable": "composer update --prefer-stable --prefer-dist",
+    "coverage": "vendor/bin/pest --coverage",
+    "markdown": "vendor/bin/testbench app:markdown",
+    "check": [
+      "@pint",
+      "@test",
+      "@markdown"
+    ],
+    "add": []
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true,
+      "phpstan/extension-installer": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

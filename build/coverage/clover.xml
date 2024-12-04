@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1733317639">
+  <project timestamp="1733317639">
+    <package name="SchenkeIo\LaravelGzip\Facades">
+      <file name="/home/srv/packages/schenke-io/laravel-gzip/src/Facades/Gzip.php">
+        <class name="SchenkeIo\LaravelGzip\Facades\Gzip" namespace="SchenkeIo\LaravelGzip\Facades">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="13" type="method" name="getFacadeAccessor" visibility="protected" complexity="1" crap="1" count="2"/>
+        <line num="15" type="stmt" count="2"/>
+        <metrics loc="18" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+    </package>
+    <package name="SchenkeIo\LaravelGzip">
+      <file name="/home/srv/packages/schenke-io/laravel-gzip/src/Gzip.php">
+        <class name="SchenkeIo\LaravelGzip\Gzip" namespace="SchenkeIo\LaravelGzip">
+          <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="11" coveredelements="11"/>
+        </class>
+        <line num="7" type="method" name="putContents" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="9" type="stmt" count="1"/>
+        <line num="10" type="stmt" count="1"/>
+        <line num="11" type="stmt" count="1"/>
+        <line num="14" type="method" name="getContents" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="16" type="stmt" count="2"/>
+        <line num="18" type="stmt" count="2"/>
+        <line num="19" type="stmt" count="2"/>
+        <line num="20" type="stmt" count="2"/>
+        <line num="22" type="stmt" count="2"/>
+        <line num="24" type="stmt" count="2"/>
+        <metrics loc="27" ncloc="26" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="11" coveredelements="11"/>
+      </file>
+      <file name="/home/srv/packages/schenke-io/laravel-gzip/src/LaravelGzipServiceProvider.php">
+        <class name="SchenkeIo\LaravelGzip\LaravelGzipServiceProvider" namespace="SchenkeIo\LaravelGzip">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+        </class>
+        <line num="10" type="method" name="register" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="12" type="stmt" count="2"/>
+        <line num="13" type="stmt" count="2"/>
+        <line num="14" type="stmt" count="2"/>
+        <line num="15" type="stmt" count="2"/>
+        <line num="18" type="method" name="configurePackage" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="20" type="stmt" count="2"/>
+        <metrics loc="23" ncloc="23" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+      </file>
+    </package>
+    <metrics files="3" loc="68" ncloc="63" classes="3" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="20" coveredelements="20"/>
+  </project>
+</coverage>
