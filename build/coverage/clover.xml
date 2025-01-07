@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1733317639">
-  <project timestamp="1733317639">
+<coverage generated="1736242374">
+  <project timestamp="1736242374">
     <package name="SchenkeIo\LaravelGzip\Facades">
       <file name="/home/srv/packages/schenke-io/laravel-gzip/src/Facades/Gzip.php">
         <class name="SchenkeIo\LaravelGzip\Facades\Gzip" namespace="SchenkeIo\LaravelGzip\Facades">
